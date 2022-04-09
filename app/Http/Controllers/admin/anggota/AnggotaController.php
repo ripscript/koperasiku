@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\admin\anggota;
+use Exception;
 use App\models\Anggota;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AnggotaController extends Controller
 {
@@ -15,8 +18,38 @@ class AnggotaController extends Controller
     }
     
     public function tambahAnggota ()
+    {    
+    return view('admin.admin.tambahAnggota');
+    }
+
+    public function store(Request $request)
     {
-        return view('admin.admin.tambahAnggota');
+        // dd($request->all());
+        // dd($request['namaLengkap']);
+        try {
+            DB::table('anggota')->insert([
+                'nama'=>$request['namaLengkap'],
+                'ttl'=>$request['ttl'],
+                'pekerjaan'=>$request['pekerjaan'],
+                'alamat'=>$request['alamat'],
+                'simpanan_pokok'=>$request['simpanan_pokok']
+            ]);
+            return redirect()->route('anggota.daftar-anggota');
+        } catch (Exception $th) {
+            //throw $th;
+        }
+    }
+
+    public function delete($id)
+    {
+        try {
+            DB::table('anggota')->where('id',$id)->delete();
+            return redirect()->back(); 
+        } catch (Exception $th) {
+            //throw $th;
+            Alert::error('Ops!!! Hapus Gagal');
+            return redirect()->back();
+        }
     }
 
 

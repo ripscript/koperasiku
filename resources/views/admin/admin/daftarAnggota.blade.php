@@ -53,11 +53,11 @@
                                 </td>
                                 <td>{{ $item->created_at }}</td>
                                 <td>
-                                    <a href="{{ route('admin.edit-anggota', $item->id) }}" class="btn btn-sm btn-icon btn-success">
+                                    <a href="" class="btn btn-sm btn-icon btn-success">
                                         <i class="icon-copy dw dw-edit-2"></i>
                                     </a>
 
-                                    <a class="btn btn-sm btn-icon btn-danger btn-delete" btnId="{{ $item->id }}">
+                                    <a class="btn btn-sm btn-icon btn-danger btn-delete" btnId="{{$item->id}}">
                                         <i class="icon-copy dw dw-delete-3 text-light"></i>
                                     </a>
                                 </td>

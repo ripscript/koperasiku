@@ -30,7 +30,7 @@
                 </a>
                 <ul class="submenu">
                     <li><a href="{{ route('anggota.daftar-anggota') }}">Daftar Anggota</a></li>
-                    <li><a href="{{ route('anggota.tambah-anggota') }}">Tambah Anggota</a></li>
+                    <li><a href="">Tambah Anggota</a></li>
                 </ul>
             </li>
         </ul>

@@ -53,7 +53,7 @@
                         </div>
     
                         <div class="col-lg-8">
-                            <input name="ttl" type="ttl" class="form-control" placeholder="Masukan TTL disini ...." required value="{{ old('ttl') }}">
+                            <input name="ttl" type="date" class="form-control" placeholder="Masukan TTL disini ...." required value="{{ old('ttl') }}">
                         </div>
                     </div>
 
