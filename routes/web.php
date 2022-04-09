@@ -29,5 +29,8 @@ Route::middleware(['admin'])->group(function () {
 
     Route::get('/admin/hapus-admin/{id}', 'admin\admin\AdminController@delete')->name('admin.hapus-admin');
 
+    Route::get('/anggota/daftar-anggota', 'admin\anggota\AnggotaController@daftarAnggota')->name('anggota.daftar-anggota');
+    Route::get('/anggota/tambah-anggota', 'admin\anggota\AnggotaController@tambahAnggota')->name('anggota.tambah-anggota');
+
     Route::get('/logout', 'LogoutController@logout')->name('logout');
 });

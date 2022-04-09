@@ -24,6 +24,15 @@
                     <li><a href="{{ route('admin.tambah-admin') }}">Tambah Admin</a></li>
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle">
+                    <span class="micon dw dw-user"></span><span class="mtext">Anggota</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="{{ route('anggota.daftar-anggota') }}">Daftar Anggota</a></li>
+                    <li><a href="{{ route('anggota.tambah-anggota') }}">Tambah Anggota</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
