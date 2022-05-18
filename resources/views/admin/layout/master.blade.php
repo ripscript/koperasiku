@@ -20,6 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('themes/deskapp2/vendors/styles/icon-font.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('themes/deskapp2/src/plugins/jvectormap/jquery-jvectormap-2.0.3.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('themes/deskapp2/vendors/styles/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
 	<!-- DataTable -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('themes/deskapp2/src/plugins/datatables/css/dataTables.bootstrap4.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('themes/deskapp2/src/plugins/datatables/css/responsive.bootstrap4.min.css') }}">
@@ -41,7 +42,7 @@
 	@php
 		$user = getUserData();
 	@endphp
-	{{-- <div class="pre-loader">
+	<div class="pre-loader">
 		<div class="pre-loader-box">
 			<div class="loader-logo"><img src="{{ asset('themes/deskapp2/vendors/images/deskapp-logo.svg') }}" alt=""></div>
 			<div class='loader-progress' id="progress_div">
@@ -52,7 +53,7 @@
 				Loading...
 			</div>
 		</div>
-	</div> --}}
+	</div>
 
 	<div class="header">
 		@include('admin.layout.header')
@@ -102,6 +103,7 @@
 	<script src="{{ asset('themes/deskapp2/src/plugins/sweetalert2/sweetalert2.all.js') }}"></script>
 	<script src="{{ asset('themes/deskapp2/src/plugins/sweetalert2/sweet-alert.init.js') }}"></script>
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="{{ asset('plugins/jquery-number-master/jquery.number.min.js') }}"></script>
 	@stack('scripts')
 </body>
 </html>

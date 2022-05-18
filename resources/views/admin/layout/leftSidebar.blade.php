@@ -24,6 +24,30 @@
                     <li><a href="{{ route('admin.tambah-admin') }}">Tambah Admin</a></li>
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle">
+                    <span class="micon dw dw-user"></span><span class="mtext">Anggota</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="{{ route('anggota.daftar-anggota') }}">Daftar Anggota</a></li>
+                    <li><a href="{{ route('anggota.tambah-anggota') }}">Tambah Anggota</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle">
+                    <span class="micon dw dw-user"></span><span class="mtext">Pinjaman</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="{{ route('pengajuan.daftar-peminjam') }}">Daftar Peminjam</a></li>
+                    <li><a href="{{ route('pinjaman.tambah-pinjaman') }}">Tambah pinjaman</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{ route('logout') }}" class="dropdown-toggle no-arrow">
+                    <i class="micon fas fa-sign-out-alt"></i>
+                    <span class="mtext">Logout</span>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
