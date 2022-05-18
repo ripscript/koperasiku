@@ -45,5 +45,11 @@ Route::middleware(['admin'])->group(function () {
     // End::pengajuan --------------------------------------------------------------------------------->
 
 
+    Route::get('/anggota/daftar-anggota', 'admin\anggota\AnggotaController@daftarAnggota')->name('anggota.daftar-anggota');
+    Route::get('/anggota/tambah-anggota', 'admin\anggota\AnggotaController@tambahAnggota')->name('anggota.tambah-anggota');
+    Route::post('/anggota/tambah-anggota', 'admin\anggota\AnggotaController@store')->name('anggota.tambah-anggota.store');
+    Route::get('/anggota/hapus-anggota/{id}', 'admin\anggota\AnggotaController@delete')->name('anggota.hapus-anggota');
+
+
     Route::get('/logout', 'LogoutController@logout')->name('logout');
 });

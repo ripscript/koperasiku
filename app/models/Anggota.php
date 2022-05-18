@@ -2,6 +2,7 @@
 
 namespace App\models;
 
+use App\models\Jabatan;
 use Illuminate\Database\Eloquent\Model;
 
 class Anggota extends Model
